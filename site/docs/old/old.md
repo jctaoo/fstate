@@ -90,7 +90,7 @@ const href = externState(
 ## 状态流
 
 在该状态管理库中, 除了状态节点, 还有状态流. 状态流是一个更大的概念, 如图所示:
-![Data Flow](../images/Data%20Flow.png)
+![Data Flow](../images/Data Flow.png)
 
 状态节点可以被包装成 `Selector`, 这使得数据源可以被转化成其他内容, 比如制作一个 Todo App, 数据源为 Todo 列表, 那我们就可以通过 Selector 来选出那些完成了的项目, 或者是过期的项目. 这些数据源 (State) 和 Selector 一个一个串在一起, 最终显示在界面上, 叫做状态流.
 
