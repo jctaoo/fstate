@@ -2,7 +2,7 @@
 
 我们现在已经足够了解 State Node, 开始进入下一个概念 `Selector`, 先看回这张图
 
-![](%E6%95%B0%E6%8D%AE%E5%9B%BE%E4%B8%AD%E7%9A%84%E4%BC%A0%E9%80%92%E8%80%85%20%E2%80%94%20Selector/Screen%20Shot%202022-03-16%20at%2010.22.21%20PM.png)
+![数据图](../images/Data%20Graph.png)
 
 首先，先介绍 `Selector`。`Selector` 是一种将数据源以另一种形式往数据图的下游进行传递的机制。那这个机制有什么用吗？
 

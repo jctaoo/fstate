@@ -1,9 +1,8 @@
-# Quick Start
+# 数据源 —— State Node
 
-## Quick Start
 fstate 的本质是一个单向数据图, 用一个图来说明:
 
-![](Quick%20Start/Screen%20Shot%202022-03-16%20at%2010.22.21%20PM.png)
+![数据图](../images/Data%20Graph.png)
 
 从图中，可以看出，有许多类似 `State Node`、 `link`、 `Selector` 之类的概念，我们稍后会详细地介绍它们的性质及其用法和场景。在开始时，我们不妨用简单的话和代码来解释这个过程, 来让使用者对 fstate 有个大概的了解:
 
@@ -21,7 +20,7 @@ const counter = state({
 });
 ```
 
-> 代码中出现了一个新的名词 —— `action`， 简单滴说， `action` 就是一个修改 `State Node` 的函数，它的好处在于把一系列操作包裹在一个函数中，而且函数有名字，方便使用者理解或者复用逻辑。  
+> 代码中出现了一个新的名词 —— `action`， 简单滴说， `action` 就是一个修改 `State Node` 的函数，它的好处在于把一系列操作包裹在一个函数中，而且函数有名字，方便使用者理解或者复用逻辑。
 
 `state` 函数用于定义一个 `State Node`，其告诉 fstate 该如何创建一个 `State Node` 以及如何初始化，如何更新其值等等。因此 `state` 所定义的 counter 其实是一个创建 `State Node` 的**模版**，我们可以用 counter 创建多个 `State Node`。 这种关系有点类似于 类 和 类的实例（如果你了解面向对象的话），也类似于 React 中的 Component 和 Element。（如果你了解 React 的话）
 
@@ -88,9 +87,10 @@ addCounterBtn.addEventListener("click", () => {
 
 完整的代码见 (马上就有了)
 
-> 我们在该 Demo 中使用了两个新的函数，`bind` 和 `textContent`，这是来自 `@fstate/dom` 包下的工具，让 dom 和 fstate 连接在一起，并提供响应式能力。  
+> 我们在该 Demo 中使用了两个新的函数，`bind` 和 `textContent`，这是来自 `@fstate/dom` 包下的工具，让 dom 和 fstate 连接在一起，并提供响应式能力。
 
 在 Quick Start 部分中，你已经学会了：
+
 1. 定义 state 模版，并声明 Actions
 2. 创建单例 State Node
 3. 创建多实例 State Node
@@ -98,10 +98,4 @@ addCounterBtn.addEventListener("click", () => {
 5. 直接更新 State Node
 6. 通过 Actions 更新 State Node
 
-接下来，将进入下一个部分，「数据图中的传递者 — Selector」
-
-
-
-
-
-
+接下来，将进入下一个部分，[数据图中的传递者 — Selector](./selector.md)
