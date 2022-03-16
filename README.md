@@ -22,8 +22,8 @@
 ```javascript
 // 创建状态并声明 Actions
 const count = state(
- 0,
- { increment: () => count.value += 1; }
+  0,
+  { increment: () => count.value += 1; }
 );
 const message = state("Hello World");
 
@@ -53,13 +53,13 @@ observer.close(); // 取消观察
 ```javascript
 // 第一个参数用于返回当前状态, 第二个参数用于执行监听等操作
 const href = externState(
- () => {
-  return window.location.href;
- },
- (callback) => {
-   window.addEventListener("popstate", callback);
-   return () => window.removeEventListener("popstate", callback);
- }
+  () => {
+    return window.location.href;
+  },
+  (callback) => {
+    window.addEventListener("popstate", callback);
+    return () => window.removeEventListener("popstate", callback);
+  }
 );
 ```
 
@@ -71,17 +71,17 @@ const href = externState(
 
 ```javascript
 const href = externState(
- ({ newValue, key }) => {
-  if (!key !== 'count') return;
-  return newValue;
- },
- (callback) => {
-  window.addEventListener('storage', callback);
-   return () => window.removeEventListener("storage", callback);
- },
- (newValue) => {
-     localStorage.setItem('count', newValue);
- }
+  ({ newValue, key }) => {
+    if (!key !== 'count') return;
+    return newValue;
+  },
+  (callback) => {
+    window.addEventListener('storage', callback);
+    return () => window.removeEventListener("storage", callback);
+  },
+  (newValue) => {
+    localStorage.setItem('count', newValue);
+  }
 );
 ```
 
@@ -101,7 +101,7 @@ const href = externState(
 const todoList = state(
  [],
  {
-  addTodo: (title) => { todoList.push({ title, completed: false, id: generateId() }) };
+   addTodo: (title) => { todoList.push({ title, completed: false, id: generateId() }) };
  }
 );
 
@@ -111,11 +111,11 @@ const completedTodos = selector(todoList, (list) => { return list.filter(i => i.
 ···
 const completedTodos = useValue(completedTodos);
 return <ul>
- {
-  completedTodos.map(todo => (
-   <li>{ todo.title }</li>
-  ))
- }
+  {
+    completedTodos.map(todo => (
+      <li>{ todo.title }</li>
+    ))
+  }
 </ul>
 ...
 ```
