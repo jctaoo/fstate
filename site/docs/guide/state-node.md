@@ -2,7 +2,7 @@
 
 fstate 的本质是一个单向数据图, 用一个图来说明:
 
-![数据图](../images/Data Graph.png)
+![数据图](../images/DataGraph.png)
 
 从图中，可以看出，有许多类似 `State Node`、 `link`、 `Selector` 之类的概念，我们稍后会详细地介绍它们的性质及其用法和场景。在开始时，我们不妨用简单的话和代码来解释这个过程, 来让使用者对 fstate 有个大概的了解:
 
